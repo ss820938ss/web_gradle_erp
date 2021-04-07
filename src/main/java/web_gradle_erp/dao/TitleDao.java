@@ -10,5 +10,4 @@ public interface TitleDao {
 	int insertTitle(Title title);
 	int updateTitle(Title title);
 	int deleteTitle(Title title);
-	int deleteTitle(int title);
 }

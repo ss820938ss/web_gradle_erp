@@ -76,9 +76,9 @@ public class TitleDaoTest {
 	@Test
 	public void test05DeleteTitle() {
 		System.out.printf("%s()%n", "testDeleteTitle");
-		int res = dao.deleteTitle(6);
+		Title newTitle = new Title(6);
+		int res = dao.deleteTitle(newTitle);
 		Assert.assertEquals(1, res);
 		dao.selectTitleByAll().stream().forEach(System.out::println);
 	}
-
 }
