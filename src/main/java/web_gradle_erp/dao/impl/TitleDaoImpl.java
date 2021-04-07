@@ -43,7 +43,6 @@ public class TitleDaoImpl implements TitleDao {
 	}
 
 	private Title getTitle(ResultSet rs) throws SQLException {
-		//titleNo, titleName
 		int titleNo = rs.getInt("titleNo");
 		String titleName = rs.getString("titleName");
 		return new Title(titleNo, titleName);
