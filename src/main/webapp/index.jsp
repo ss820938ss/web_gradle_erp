@@ -1,4 +1,4 @@
-<%@ page import="web_gradle_erp.ds.JndiDS"%>
+<%@page import="web_gradle_erp.ds.JndiDS"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	성공했습니다.
-	<%=JndiDS.getConnection() %>
+방가방가!!
+<%=JndiDS.getConnection() %>
 </body>
 </html>

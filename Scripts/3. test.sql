@@ -2,5 +2,5 @@ select * from employee;
 
 select * from department;
 
-select * from title;
-
+-- title dao
+select titleNo, titleName from title;
