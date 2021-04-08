@@ -61,8 +61,8 @@ public class EmployeeDaoTest {
 	public void test02InsertEmployee() {
 		System.out.printf("%s()%n", "testInsertEmployee");
 		Employee emp = new Employee(
-				1004, "천사", new Title(5), 
-				new Employee(1003), 2000000, 
+				1004, "김김김", new Title(5), 
+				new Employee(1443), 13131313, 
 				new Department(1), new Date());
 		int res = dao.insertEmployee(emp);
 		Assert.assertEquals(1, res);
@@ -73,8 +73,8 @@ public class EmployeeDaoTest {
 	public void test03UpdateEmployee() {
 		System.out.printf("%s()%n", "testUpdateEmployee");
 		Employee emp = new Employee(
-				1004, "천사2", new Title(4), 
-				new Employee(1003), 3000000, 
+				1004, "김김김", new Title(4), 
+				new Employee(1122), 13131313, 
 				new Department(1), new Date());
 		int res = dao.updateEmployee(emp);
 		Assert.assertEquals(1, res);
