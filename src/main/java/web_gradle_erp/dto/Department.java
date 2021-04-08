@@ -5,10 +5,7 @@ public class Department {
 	private String deptName;
 	private int floor;
 	
-//	private List<Employee> emplist;
-
 	public Department() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Department(int deptNo) {
