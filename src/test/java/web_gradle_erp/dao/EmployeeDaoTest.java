@@ -1,4 +1,3 @@
-  
 package web_gradle_erp.dao;
 
 import java.sql.Connection;
@@ -62,7 +61,7 @@ public class EmployeeDaoTest {
 		System.out.printf("%s()%n", "testInsertEmployee");
 		Employee emp = new Employee(
 				1004, "김김김", new Title(5), 
-				new Employee(1443), 13131313, 
+				new Employee(1443), 1313131, 
 				new Department(1), new Date());
 		int res = dao.insertEmployee(emp);
 		Assert.assertEquals(1, res);
@@ -74,7 +73,7 @@ public class EmployeeDaoTest {
 		System.out.printf("%s()%n", "testUpdateEmployee");
 		Employee emp = new Employee(
 				1004, "김김김", new Title(4), 
-				new Employee(1122), 13131313, 
+				new Employee(1122), 1313131, 
 				new Department(1), new Date());
 		int res = dao.updateEmployee(emp);
 		Assert.assertEquals(1, res);
