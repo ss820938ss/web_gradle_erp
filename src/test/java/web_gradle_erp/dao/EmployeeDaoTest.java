@@ -20,8 +20,8 @@ import web_gradle_erp.dto.Title;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EmployeeDaoTest {
-	private static Connection con;
 	private static EmployeeDaoImpl dao = EmployeeDaoImpl.getInstance();
+	private static Connection con;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -50,7 +50,7 @@ public class EmployeeDaoTest {
 	@Test
 	public void test04SelectEmployeeByNo() {
 		System.out.printf("%s()%n", "testSelectEmployeeByNo");
-		Employee emp = new Employee(1003);
+		Employee emp = new Employee(2106);
 		Employee searchEmp = dao.selectEmployeeByNo(emp);
 		Assert.assertNotNull(searchEmp);
 		System.out.println(searchEmp);
@@ -59,10 +59,7 @@ public class EmployeeDaoTest {
 	@Test
 	public void test02InsertEmployee() {
 		System.out.printf("%s()%n", "testInsertEmployee");
-		Employee emp = new Employee(
-				1004, "김김김", new Title(5), 
-				new Employee(1443), 1313131, 
-				new Department(1), new Date());
+		Employee emp = new Employee(1004, "천사", new Title(5), new Employee(4377), 2000000, new Department(1), new Date());
 		int res = dao.insertEmployee(emp);
 		Assert.assertEquals(1, res);
 		System.out.println(dao.selectEmployeeByNo(emp));
@@ -71,10 +68,7 @@ public class EmployeeDaoTest {
 	@Test
 	public void test03UpdateEmployee() {
 		System.out.printf("%s()%n", "testUpdateEmployee");
-		Employee emp = new Employee(
-				1004, "김김김", new Title(4), 
-				new Employee(1122), 1313131, 
-				new Department(1), new Date());
+		Employee emp = new Employee(1004, "천사2", new Title(4), new Employee(1003), 2000000, new Department(2), new Date());
 		int res = dao.updateEmployee(emp);
 		Assert.assertEquals(1, res);
 		System.out.println(dao.selectEmployeeByNo(emp));

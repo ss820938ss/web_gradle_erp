@@ -17,8 +17,8 @@ import web_gradle_erp.dto.Department;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DepartmentDaoTest {
-	private static Connection con;
 	private static DepartmentDaoImpl dao = DepartmentDaoImpl.getInstance();
+	private static Connection con;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -65,7 +65,7 @@ public class DepartmentDaoTest {
 	@Test
 	public void test03UpdateDepartment() {
 		System.out.printf("%s()%n", "testUpdateDepartment");
-		Department dept = new Department(6, "경리", 7);
+		Department dept = new Department(5, "계약직", 6);
 		int res = dao.updateDepartment(dept);
 		Assert.assertEquals(1, res);
 		System.out.println(dao.selectDepartmentByNo(dept));
